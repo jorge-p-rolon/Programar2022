@@ -14,4 +14,4 @@ for (let actual: number = num1; actual <= num2; actual++) {
   suma = suma + actual;
 }
 
-console.log("El resultado de la suma es: ", suma);
+console.log("El resultado de la suma es: ", suma); 
