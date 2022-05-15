@@ -16,4 +16,3 @@ for (let actual: number = num1; actual <= num2; actual++) {
 console.log("El resultado de la suma es: ", suma);
 
 //en este ejercicio se usa el metodo de la burbuja
-  
