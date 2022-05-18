@@ -21,6 +21,6 @@ function cantidadDeDivisores(num: number): Number {
 
 let numero: number = Number(prompt("ingrese numero:  "));
 console.log(
-  "La cantidad de multiplos de " + numero + " es : ",
+  "La cantidad de divisores de " + numero + " es : ",
   cantidadDeDivisores(numero)
 );
