@@ -2,15 +2,22 @@
 //Rolón Jorge
 //Comisión A
 
-function llenarVector(palabra: string): number {
+function llenarVector(nombre1: string, nombre2: string): number {
   for (let indice: number = 0; indice < 6; indice++) {
-    palabra[indice] = Number(prompt("Ingrese número: "));
+    nombre1[indice] = Number(
+      prompt("Ingrese los 6 números del primer Array: ")
+    );
+  }
+  for (let indice: number = 0; indice < 6; indice++) {
+    nombre2[indice] = Number(
+      prompt("Ingrese los 6 números del segundo Array: ")
+    );
   }
 }
 
-function sumarVector(palabra1: string, palabra2: string): number {
+function sumarVector(nombre1: string, nombre2: string): number {
   for (let indice: number = 0; indice < 6; indice++) {
-    resultSuma[indice] = palabra1[indice] + palabra2[indice];
+    resultSuma[indice] = nombre1[indice] + nombre2[indice];
   }
 }
 
@@ -24,7 +31,6 @@ let arreglo1: number[] = new Array(6);
 let arreglo2: number[] = new Array(6);
 let resultSuma: number[] = new Array(6);
 
-llenarVector(arreglo1);
-llenarVector(arreglo2);
+llenarVector(arreglo1, arreglo2);
 sumarVector(arreglo1, arreglo2);
 mostrarSuma();
