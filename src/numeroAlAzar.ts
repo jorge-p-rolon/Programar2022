@@ -13,3 +13,4 @@ for (let indice: number = 0; indice < 10; indice++) {
 for (let indice: number = 0; indice < 10; indice++) {
   console.log(arreglo[indice]);
 }
+  
