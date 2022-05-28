@@ -1,10 +1,6 @@
-/*Actividad (Promedio Escolar)
-Desarrolle un algoritmo que permita cargar alumnos y sus notas en los tres trimestres
-Se debe permitir obtener el promedio anual (es decir, de sus tres notas) de un alumno (ingresado por el usuario)
-Luego de resolverlo, pensar en aprovechar métodos y discutir como representar la información 
+//Rolón jorge comisión A
 
-Rolón jorge  comision A */
-
+//funcion ingresar alumnos e ingresar notas
 function ingresarNotas(num: number): number {
   for (let i: number = 0; i < num; i++) {
     alumnos[i] = prompt("Ingrese el nombre del alumno:");
@@ -14,7 +10,15 @@ function ingresarNotas(num: number): number {
   }
 }
 
-function mostrarPromedio(): void {
+//funcion cargar promedio
+function cargarPromedio():number {
+  for (let i: number = 0 ; i < cantidad ; i++) {
+     promedio[i] = (nota1[i] + nota2[i] + nota3[i]) / 3;   
+  }
+}
+
+//funcion mostrar los nombres y promedios de todos los estudiantes
+function promedioTotales(): number {
   for (let i: number = 0; i < cantidad; i++) {
     let resultado: number = 0;
     resultado = (nota1[i] + nota2[i] + nota3[i]) / 3;
@@ -22,11 +26,32 @@ function mostrarPromedio(): void {
   }
 }
 
+
+//funcion mostrar promedio de cierto alumno
+function mostrarPromedio():number{
+  let alumno: string = prompt("Ingrese el Nombre del estudiante del cual desee saber su promedio:");
+
+  for(let i :number= 0 ; i < cantidad ; i++){
+    if(alumnos[i] === alumno){
+      console.log("el promedio final de",alumnos[i]"es:",promedio[i]);
+    }
+  } 
+}
+
 let cantidad: number = Number(prompt("Ingrese la cantidad de alumnos:"));
 let alumnos: number = new Array(cantidad);
-let nota1: number = new Array(3);
-let nota2: number = new Array(3);
-let nota3: number = new Array(3);
+let nota1 : number = new Array(3);
+let nota2 : number = new Array(3);
+let nota3 : number = new Array(3);
+let promedio :number = new Array(cantidad);
+let mostrarPromedioTotales: number = new Array(cantidad);
 
+//se puede agregar la funcion promediosotales() para ver todos 
+//se agregar la funcion mostrarPromedio() para ver uno en especial
 ingresarNotas(cantidad);
+cargarPromedio();
+promedioTotales();
 mostrarPromedio();
+
+
+
